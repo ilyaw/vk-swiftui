@@ -11,6 +11,8 @@
 		09BC29A226EF869000657474 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29A126EF869000657474 /* ContentView.swift */; };
 		09BC29A426EF869200657474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BC29A326EF869200657474 /* Assets.xcassets */; };
 		09BC29A726EF869200657474 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BC29A626EF869200657474 /* Preview Assets.xcassets */; };
+		09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29AF26F1152500657474 /* RoundedRectangleButtonStyle.swift */; };
+		09BC29B426F115D100657474 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29B326F115D100657474 /* Color + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		09BC29A326EF869200657474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09BC29A626EF869200657474 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09BC29A826EF869200657474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09BC29AF26F1152500657474 /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		09BC29B326F115D100657474 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		09BC299E26EF869000657474 /* VKClient */ = {
 			isa = PBXGroup;
 			children = (
+				09BC29AE26F1151100657474 /* Styles */,
 				09BC299F26EF869000657474 /* VKClientApp.swift */,
 				09BC29A126EF869000657474 /* ContentView.swift */,
+				09BC29B126F115AD00657474 /* Extensions */,
 				09BC29A326EF869200657474 /* Assets.xcassets */,
 				09BC29A826EF869200657474 /* Info.plist */,
 				09BC29A526EF869200657474 /* Preview Content */,
@@ -67,6 +73,22 @@
 				09BC29A626EF869200657474 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09BC29AE26F1151100657474 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				09BC29AF26F1152500657474 /* RoundedRectangleButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		09BC29B126F115AD00657474 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09BC29B326F115D100657474 /* Color + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */,
+				09BC29B426F115D100657474 /* Color + Extension.swift in Sources */,
 				09BC29A226EF869000657474 /* ContentView.swift in Sources */,
 				09BC29A026EF869000657474 /* VKClientApp.swift in Sources */,
 			);
