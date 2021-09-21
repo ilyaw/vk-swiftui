@@ -44,7 +44,6 @@ struct ContentView: View {
                     .disabled(login.isEmpty || password.isEmpty)
                 }
             }
-            
         }
     }
 }
