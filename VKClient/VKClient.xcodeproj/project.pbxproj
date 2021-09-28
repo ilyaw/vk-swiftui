@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0900736E2701ED2200B3C9FF /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900736D2701ED2200B3C9FF /* GroupsView.swift */; };
 		090073712701FD6100B3C9FF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090073702701FD6100B3C9FF /* Friend.swift */; };
-		090073752702069900B3C9FF /* RowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090073742702069900B3C9FF /* RowItemView.swift */; };
+		090073752702069900B3C9FF /* StandartRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090073742702069900B3C9FF /* StandartRowItemView.swift */; };
 		09356BA0270212370010CE97 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09356B9F270212370010CE97 /* FriendDetailView.swift */; };
 		09BC29A026EF869000657474 /* VKClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC299F26EF869000657474 /* VKClientApp.swift */; };
 		09BC29A226EF869000657474 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29A126EF869000657474 /* ContentView.swift */; };
@@ -19,12 +19,15 @@
 		09BC29B426F115D100657474 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29B326F115D100657474 /* Color + Extension.swift */; };
 		09C0DC5926FA469400DEFF54 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0DC5826FA469400DEFF54 /* FriendsView.swift */; };
 		09C0DC5C26FA4B5800DEFF54 /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0DC5B26FA4B5800DEFF54 /* CircleShadow.swift */; };
+		09C5382127037895000429AB /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5382027037895000429AB /* GroupDetailView.swift */; };
+		09C5382327037A69000429AB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5382227037A69000429AB /* Group.swift */; };
+		09C5382727038A8F000429AB /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09C5382627038A8F000429AB /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0900736D2701ED2200B3C9FF /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		090073702701FD6100B3C9FF /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		090073742702069900B3C9FF /* RowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowItemView.swift; sourceTree = "<group>"; };
+		090073742702069900B3C9FF /* StandartRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartRowItemView.swift; sourceTree = "<group>"; };
 		09356B9F270212370010CE97 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
 		09BC299C26EF869000657474 /* VKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BC299F26EF869000657474 /* VKClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKClientApp.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		09BC29B326F115D100657474 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		09C0DC5826FA469400DEFF54 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		09C0DC5B26FA4B5800DEFF54 /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
+		09C5382027037895000429AB /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		09C5382227037A69000429AB /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		09C5382627038A8F000429AB /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				090073702701FD6100B3C9FF /* Friend.swift */,
+				09C5382227037A69000429AB /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 				09BC29AE26F1151100657474 /* Styles */,
 				0900736F2701FD4800B3C9FF /* Models */,
 				09BC29B126F115AD00657474 /* Extensions */,
+				09C5382627038A8F000429AB /* Localizable.stringsdict */,
 				09BC29A826EF869200657474 /* Info.plist */,
 				09BC29A326EF869200657474 /* Assets.xcassets */,
 				09BC29A526EF869200657474 /* Preview Content */,
@@ -134,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				09356BA1270213950010CE97 /* Friend */,
+				09C5381F27037876000429AB /* Group */,
 				09BC29A126EF869000657474 /* ContentView.swift */,
-				0900736D2701ED2200B3C9FF /* GroupsView.swift */,
-				090073742702069900B3C9FF /* RowItemView.swift */,
+				090073742702069900B3C9FF /* StandartRowItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +155,15 @@
 				09C0DC5B26FA4B5800DEFF54 /* CircleShadow.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		09C5381F27037876000429AB /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				0900736D2701ED2200B3C9FF /* GroupsView.swift */,
+				09C5382027037895000429AB /* GroupDetailView.swift */,
+			);
+			path = Group;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +207,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 09BC299326EF869000657474;
 			productRefGroup = 09BC299D26EF869000657474 /* Products */;
@@ -208,6 +226,7 @@
 			files = (
 				09BC29A726EF869200657474 /* Preview Assets.xcassets in Resources */,
 				09BC29A426EF869200657474 /* Assets.xcassets in Resources */,
+				09C5382727038A8F000429AB /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,11 +240,13 @@
 				09C0DC5926FA469400DEFF54 /* FriendsView.swift in Sources */,
 				09C0DC5C26FA4B5800DEFF54 /* CircleShadow.swift in Sources */,
 				09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */,
+				09C5382327037A69000429AB /* Group.swift in Sources */,
 				09BC29B426F115D100657474 /* Color + Extension.swift in Sources */,
 				09BC29A226EF869000657474 /* ContentView.swift in Sources */,
 				09356BA0270212370010CE97 /* FriendDetailView.swift in Sources */,
-				090073752702069900B3C9FF /* RowItemView.swift in Sources */,
+				090073752702069900B3C9FF /* StandartRowItemView.swift in Sources */,
 				0900736E2701ED2200B3C9FF /* GroupsView.swift in Sources */,
+				09C5382127037895000429AB /* GroupDetailView.swift in Sources */,
 				09BC29A026EF869000657474 /* VKClientApp.swift in Sources */,
 				090073712701FD6100B3C9FF /* Friend.swift in Sources */,
 			);

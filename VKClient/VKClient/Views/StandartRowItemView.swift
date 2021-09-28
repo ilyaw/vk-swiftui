@@ -1,5 +1,5 @@
 //
-//  RowItemView.swift
+//  StandartRowItemView.swift
 //  VKClient
 //
 //  Created by Ilya on 27.09.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RowItemView: View {
+struct StandartRowItemView: View {
     
     let photo: Image
     let text: String
@@ -20,6 +20,7 @@ struct RowItemView: View {
                 .modifier(CircleView())
                 .frame(width: 55, height: 55)
             Text(text)
+                .padding(.leading, 5)
         }
     }
 }
@@ -27,6 +28,6 @@ struct RowItemView: View {
 
 struct RowItemView_Previews: PreviewProvider {
     static var previews: some View {
-        RowItemView(photo: Image("ilya1"), text: "Илья Руденко")
+        StandartRowItemView(photo: Image("ilya1"), text: "Илья Руденко")
     }
 }
