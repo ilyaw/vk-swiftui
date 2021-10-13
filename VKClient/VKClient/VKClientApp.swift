@@ -12,6 +12,7 @@ struct VKClientApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
+                LoginView()
                 FriendsView()
                     .tabItem {
                         Image(systemName: "person.2")
