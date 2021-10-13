@@ -11,7 +11,18 @@ import SwiftUI
 struct VKClientApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                FriendsView()
+                    .tabItem {
+                        Image(systemName: "person.2")
+                        Text("Друзья")
+                    }
+                GroupsView()
+                    .tabItem {
+                        Image(systemName: "person.3")
+                        Text("Группы")
+                    }
+            }
         }
     }
 }
