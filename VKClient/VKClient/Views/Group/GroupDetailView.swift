@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct GroupDetailView: View {
+    
+    let group: Group
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(group.groupName)
     }
 }
 
 struct GroupDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupDetailView()
+        GroupDetailView(group: getGroups().first!)
     }
 }

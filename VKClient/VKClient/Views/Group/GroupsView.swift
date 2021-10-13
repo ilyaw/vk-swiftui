@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct GroupsView: View {
+    
+    private var groups = getGroups()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(groups) { group in
+                    NavigationLink(destination: GroupDetailView(group: group)) {
+                        StandartRowItemView(photo: Image(group.postOwnerImage),
+                                            text: group.groupName,
+                                            subtext: group.shortInfo)
+                            .padding(5)
+                    }
+                }
+            }.navigationTitle("Группы")
+        }.navigationViewStyle(.stack)
     }
 }
 
