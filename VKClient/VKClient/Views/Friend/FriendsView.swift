@@ -16,13 +16,11 @@ struct FriendsView: View {
             List {
                 ForEach(friends) { friend in
                     NavigationLink(destination: FriendDetailView(friendModel: friend)) {
-                        
-                        RowItemView(photo: Image(friend.mainPhoto),
-                                    text: friend.fullName)
-
+                        StandartRowItemView(photo: Image(friend.mainPhoto),
+                                            text: friend.fullName)
+                            .padding(5)
                     }
                 }
-                
             }
             .navigationTitle("Друзья")
         }.navigationViewStyle(.stack)

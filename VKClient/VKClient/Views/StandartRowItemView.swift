@@ -11,6 +11,7 @@ struct StandartRowItemView: View {
     
     let photo: Image
     let text: String
+    var subtext: String? = nil
     
     var body: some View {
         HStack {
@@ -19,15 +20,22 @@ struct StandartRowItemView: View {
                 .aspectRatio(contentMode: .fill)
                 .modifier(CircleView())
                 .frame(width: 55, height: 55)
-            Text(text)
-                .padding(.leading, 5)
+            VStack(alignment: .leading) {
+                Text(text)
+                if let subtext = subtext {
+                    Text(subtext)
+                        .font(.system(size: 16))
+                        .foregroundColor(Color.subtext)
+                }
+            } .padding(.leading, 5)
         }
     }
 }
 
 
-struct RowItemView_Previews: PreviewProvider {
+struct StandartRowItemView_Previews: PreviewProvider {
     static var previews: some View {
-        StandartRowItemView(photo: Image("ilya1"), text: "Илья Руденко")
+//        StandartRowItemView(photo: Image("ilya1"), text: "Илья Руденко")
+        StandartRowItemView(photo: Image("group1"), text: "Group Name", subtext: "1234 участников")
     }
 }
