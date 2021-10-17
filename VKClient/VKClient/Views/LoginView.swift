@@ -9,9 +9,11 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var login: String = ""
-    @State private var password: String = ""
+    @State private var login: String = "admin"
+    @State private var password: String = "123456"
     @State private var showIncorrectCredentialsWaring = false
+    
+    @Binding var isUserAuthorized: Bool
     
     var body: some View {
         VStack {
@@ -35,9 +37,12 @@ struct LoginView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(maxWidth: 250)
                     }.padding(.horizontal, 20)
-                    Button(action: verifyLoginData) {
-                        Text("Войти")
-                    }
+                    Button(action: {
+                        let isPasswordCorrect = verifyLoginData()
+                        showIncorrectCredentialsWaring = !isPasswordCorrect
+                        withAnimation {
+                            isUserAuthorized = isPasswordCorrect
+                        }}) { Text("Войти") }
                     .buttonStyle(RoundedRectangleButtonStyle())
                     .cornerRadius(5.0)
                     .frame(maxWidth: 300)
@@ -54,26 +59,20 @@ struct LoginView: View {
                 dismissButton: .default(Text("Got it"), action: clearPassword)
             )
         }
-
+        
+    }
+    
+    private func verifyLoginData() -> Bool {
+        return login == "admin" && password == "123456"
     }
     
     private func clearPassword() {
         password = ""
     }
-    
-    private func verifyLoginData() {
-        if login == "1" && password == "1" {
-            showIncorrectCredentialsWaring = false
-        } else {
-            showIncorrectCredentialsWaring = true
-        }
-        
-//        password = ""
-    }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}
