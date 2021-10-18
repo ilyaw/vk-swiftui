@@ -2,48 +2,37 @@
 //  ContentView.swift
 //  VKClient
 //
-//  Created by Ilya on 13.09.2021.
+//  Created by Ilya on 17.10.2021.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     
-    @State private var login: String = ""
-    @State private var password: String = ""
+    @State private var isUserAuthorized: Bool = false
     
     var body: some View {
-        VStack {
-            ScrollView {
-                VStack {
-                    Image("VK_Full_Logo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(30)
-                    HStack {
-                        Text("Login:")
-                        Spacer()
-                        TextField("", text: $login)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(maxWidth: 250)
-                    }.padding(.horizontal, 20)
-                    HStack {
-                        Text("Password:")
-                        Spacer()
-                        SecureField("", text: $password)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(maxWidth: 250)
-                    }.padding(.horizontal, 20)
-                    Button("Войти") {
-                        print("Hello world!")
+        if isUserAuthorized {
+            TabView {
+                FriendsView()
+                    .tabItem {
+                        Image(systemName: "person.2")
+                        Text("Друзья")
                     }
-                    .buttonStyle(RoundedRectangleButtonStyle())
-                    .cornerRadius(5.0)
-                    .frame(maxWidth: 300)
-                    .padding(.ArrayLiteralElement(arrayLiteral: [.top, .bottom]), 5)
-                    .disabled(login.isEmpty || password.isEmpty)
-                }
-            }
+                GroupsView()
+                    .tabItem {
+                        Image(systemName: "person.3")
+                        Text("Группы")
+                    }
+                NewsfeedView()
+                    .tabItem {
+                        Image(systemName: "newspaper.fill")
+                        Text("Новости")
+                    }
+                    
+            }.transition(AnyTransition.asymmetric(insertion: .scale, removal: .opacity))
+        } else {
+            LoginView(isUserAuthorized: $isUserAuthorized)
         }
     }
 }
