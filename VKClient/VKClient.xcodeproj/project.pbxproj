@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		09356BA0270212370010CE97 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09356B9F270212370010CE97 /* FriendDetailView.swift */; };
 		098BAAAE271C7CDD0050430F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAAAD271C7CDD0050430F /* ContentView.swift */; };
 		098BAAB0271C869E0050430F /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAAAF271C869E0050430F /* NewsfeedView.swift */; };
+		098BAB17272062AC0050430F /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB16272062AC0050430F /* VKLoginWebView.swift */; };
+		098BAB19272063980050430F /* VKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB18272063980050430F /* VKLoginView.swift */; };
+		098BAB1C272065E00050430F /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 098BAB1B272065E00050430F /* SwiftKeychainWrapper */; };
+		098BAB1E272067900050430F /* Encode+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB1D272067900050430F /* Encode+Decode.swift */; };
+		098BAB20272067FA0050430F /* KeychainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB1F272067FA0050430F /* KeychainUser.swift */; };
 		09BC29A026EF869000657474 /* VKClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC299F26EF869000657474 /* VKClientApp.swift */; };
 		09BC29A226EF869000657474 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29A126EF869000657474 /* LoginView.swift */; };
 		09BC29A426EF869200657474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BC29A326EF869200657474 /* Assets.xcassets */; };
@@ -34,6 +39,10 @@
 		09356B9F270212370010CE97 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
 		098BAAAD271C7CDD0050430F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		098BAAAF271C869E0050430F /* NewsfeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedView.swift; sourceTree = "<group>"; };
+		098BAB16272062AC0050430F /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		098BAB18272063980050430F /* VKLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginView.swift; sourceTree = "<group>"; };
+		098BAB1D272067900050430F /* Encode+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encode+Decode.swift"; sourceTree = "<group>"; };
+		098BAB1F272067FA0050430F /* KeychainUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUser.swift; sourceTree = "<group>"; };
 		09BC299C26EF869000657474 /* VKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BC299F26EF869000657474 /* VKClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKClientApp.swift; sourceTree = "<group>"; };
 		09BC29A126EF869000657474 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -55,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098BAB1C272065E00050430F /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,7 @@
 			children = (
 				090073702701FD6100B3C9FF /* Friend.swift */,
 				09C5382227037A69000429AB /* Group.swift */,
+				098BAB1F272067FA0050430F /* KeychainUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -73,6 +84,7 @@
 		09007372270200B100B3C9FF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				098BAB16272062AC0050430F /* VKLoginWebView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -84,6 +96,14 @@
 				09356B9F270212370010CE97 /* FriendDetailView.swift */,
 			);
 			path = Friend;
+			sourceTree = "<group>";
+		};
+		098BAB21272070450050430F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				098BAB1D272067900050430F /* Encode+Decode.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		09BC299326EF869000657474 = {
@@ -111,6 +131,7 @@
 				09C0DC5A26FA4B1A00DEFF54 /* ViewModifiers */,
 				09BC29AE26F1151100657474 /* Styles */,
 				0900736F2701FD4800B3C9FF /* Models */,
+				098BAB21272070450050430F /* Helpers */,
 				09BC29B126F115AD00657474 /* Extensions */,
 				09C5382627038A8F000429AB /* Localizable.stringsdict */,
 				09BC29A826EF869200657474 /* Info.plist */,
@@ -148,6 +169,7 @@
 		09C0DC5626FA44F200DEFF54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				098BAB18272063980050430F /* VKLoginView.swift */,
 				098BAAAD271C7CDD0050430F /* ContentView.swift */,
 				098BAAAF271C869E0050430F /* NewsfeedView.swift */,
 				09356BA1270213950010CE97 /* Friend */,
@@ -191,6 +213,9 @@
 			dependencies = (
 			);
 			name = VKClient;
+			packageProductDependencies = (
+				098BAB1B272065E00050430F /* SwiftKeychainWrapper */,
+			);
 			productName = VKClient;
 			productReference = 09BC299C26EF869000657474 /* VKClient.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +244,9 @@
 				ru,
 			);
 			mainGroup = 09BC299326EF869000657474;
+			packageReferences = (
+				098BAB1A272065E00050430F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
 			productRefGroup = 09BC299D26EF869000657474 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,7 +276,10 @@
 			files = (
 				09C0DC5926FA469400DEFF54 /* FriendsView.swift in Sources */,
 				09C0DC5C26FA4B5800DEFF54 /* CircleShadow.swift in Sources */,
+				098BAB17272062AC0050430F /* VKLoginWebView.swift in Sources */,
 				098BAAAE271C7CDD0050430F /* ContentView.swift in Sources */,
+				098BAB20272067FA0050430F /* KeychainUser.swift in Sources */,
+				098BAB1E272067900050430F /* Encode+Decode.swift in Sources */,
 				09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */,
 				09C5382327037A69000429AB /* Group.swift in Sources */,
 				09BC29B426F115D100657474 /* Color + Extension.swift in Sources */,
@@ -260,6 +291,7 @@
 				09C5382127037895000429AB /* GroupDetailView.swift in Sources */,
 				09BC29A026EF869000657474 /* VKClientApp.swift in Sources */,
 				090073712701FD6100B3C9FF /* Friend.swift in Sources */,
+				098BAB19272063980050430F /* VKLoginView.swift in Sources */,
 				098BAAB0271C869E0050430F /* NewsfeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +481,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		098BAB1A272065E00050430F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		098BAB1B272065E00050430F /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 098BAB1A272065E00050430F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09BC299426EF869000657474 /* Project object */;
 }
