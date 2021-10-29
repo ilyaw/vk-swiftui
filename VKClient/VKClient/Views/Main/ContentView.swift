@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isUserAuthorized: Bool = false
+    @ObservedObject var contentViewModel = ContentViewModel()
     
     var body: some View {
-        if isUserAuthorized {
+        if contentViewModel.isUserAuthorized {
             TabView {
                 FriendsView()
                     .tabItem {
@@ -29,11 +29,15 @@ struct ContentView: View {
                         Image(systemName: "newspaper.fill")
                         Text("Новости")
                     }
-                    
-            }.transition(AnyTransition.asymmetric(insertion: .scale, removal: .opacity))
+            }
+            .transition(AnyTransition.asymmetric(insertion: .scale, removal: .opacity))
         } else {
-            LoginView(isUserAuthorized: $isUserAuthorized)
+            VKLoginWebView()
+                .onReceive(NotificationCenter.default.publisher(for: NSNotification.VKTokenSaved)) { _ in
+                    contentViewModel.isUserAuthorized = true
+                }
         }
+        
     }
 }
 

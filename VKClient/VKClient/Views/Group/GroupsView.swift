@@ -15,12 +15,12 @@ struct GroupsView: View {
         NavigationView {
             List {
                 ForEach(groups) { group in
-                    NavigationLink(destination: GroupDetailView(group: group)) {
-                        StandartRowItemView(photo: Image(group.postOwnerImage),
-                                            text: group.groupName,
-                                            subtext: group.shortInfo)
-                            .padding(5)
-                    }
+//                    NavigationLink(destination: GroupDetailView(group: group)) {
+//                        StandartRowItemView(photo: Image(group.postOwnerImage),
+//                                            text: group.groupName,
+//                                            subtext: group.shortInfo)
+//                            .padding(5)
+//                    }
                 }
             }.navigationTitle("Группы")
         }.navigationViewStyle(.stack)

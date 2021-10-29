@@ -12,7 +12,6 @@ import SwiftKeychainWrapper
 struct VKLoginWebView: UIViewRepresentable {
     
     fileprivate let navigationDelegate = WebViewNavigationDelegate()
-    private let timeToSecnod: Double = 86400.0
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -21,34 +20,9 @@ struct VKLoginWebView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        
-        let isNeedAuthorize = checkValidDate()
-        
-        if !isNeedAuthorize, let request = buildAuthRequest() {
+        if let request = buildAuthRequest() {
             uiView.load(request)
         }
-    }
-    
-    private func checkValidDate() -> Bool {
-        if let keychainData = KeychainWrapper.standard.string(forKey: "user") {
-            let data = Data(keychainData.utf8)
-            
-            if let decodeUser = decode(json: data, as: KeychainUser.self) {
-                
-                let now = Date().timeIntervalSince1970
-                let isValidDate = (now - decodeUser.date) < timeToSecnod
-                
-                if isValidDate {
-                    UserDefaults.standard.set(decodeUser.token, forKey: "vkToken")
-                    UserDefaults.standard.set(decodeUser.id, forKey: "userId")
-                    
-                    NotificationCenter.default.post(name: NSNotification.Name("vkTokenSaved"), object: self)
-                    return true
-                }
-            }
-        }
-        
-        return false
     }
     
     private func buildAuthRequest() -> URLRequest? {
@@ -115,7 +89,7 @@ class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
         let encodedUser = encode(object: user)
         KeychainWrapper.standard["user"] = encodedUser
         
-        NotificationCenter.default.post(name: NSNotification.Name("vkTokenSaved"), object: self)
+        NotificationCenter.default.post(name: NSNotification.VKTokenSaved, object: self)
         
         decisionHandler(.cancel)
     }

@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct StandartRowItemView: View {
     
-    let photo: Image
+    let photoUrl: String?
     let text: String
     var subtext: String? = nil
     
     var body: some View {
         HStack {
-            photo
+            KFImage(URL(string: photoUrl ?? ""))
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .modifier(CircleView())
@@ -33,9 +34,8 @@ struct StandartRowItemView: View {
 }
 
 
-struct StandartRowItemView_Previews: PreviewProvider {
-    static var previews: some View {
-//        StandartRowItemView(photo: Image("ilya1"), text: "Илья Руденко")
-        StandartRowItemView(photo: Image("group1"), text: "Group Name", subtext: "1234 участников")
-    }
-}
+//struct StandartRowItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StandartRowItemView(photo: Image("group1"), text: "Group Name", subtext: "1234 участников")
+//    }
+//}

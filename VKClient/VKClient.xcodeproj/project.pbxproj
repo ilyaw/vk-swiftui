@@ -10,16 +10,28 @@
 		0900736E2701ED2200B3C9FF /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900736D2701ED2200B3C9FF /* GroupsView.swift */; };
 		090073712701FD6100B3C9FF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090073702701FD6100B3C9FF /* Friend.swift */; };
 		090073752702069900B3C9FF /* StandartRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090073742702069900B3C9FF /* StandartRowItemView.swift */; };
+		090C3653272C107A00FC286D /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 090C3652272C107A00FC286D /* SwiftKeychainWrapper */; };
+		092EEDFE272C1894004D2474 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EEDFD272C1894004D2474 /* Friends.swift */; };
+		092EEE00272C18BE004D2474 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EEDFF272C18BE004D2474 /* Albums.swift */; };
+		092EEE02272C1939004D2474 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EEE01272C1939004D2474 /* Groups.swift */; };
+		092EEE04272C196F004D2474 /* GroupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EEE03272C196F004D2474 /* GroupInfo.swift */; };
 		09356BA0270212370010CE97 /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09356B9F270212370010CE97 /* FriendDetailView.swift */; };
+		093B29672728364E003767BE /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B29662728364E003767BE /* FriendsViewModel.swift */; };
+		0960F223272C2EC4000ACDC2 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F222272C2EC4000ACDC2 /* RealmService.swift */; };
+		0960F225272C2ED8000ACDC2 /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F224272C2ED8000ACDC2 /* DetachableObject.swift */; };
+		0960F227272C2EEE000ACDC2 /* Realm.Configuration+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F226272C2EEE000ACDC2 /* Realm.Configuration+Ext.swift */; };
 		098BAAAE271C7CDD0050430F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAAAD271C7CDD0050430F /* ContentView.swift */; };
 		098BAAB0271C869E0050430F /* NewsfeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAAAF271C869E0050430F /* NewsfeedView.swift */; };
 		098BAB17272062AC0050430F /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB16272062AC0050430F /* VKLoginWebView.swift */; };
-		098BAB19272063980050430F /* VKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB18272063980050430F /* VKLoginView.swift */; };
-		098BAB1C272065E00050430F /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 098BAB1B272065E00050430F /* SwiftKeychainWrapper */; };
 		098BAB1E272067900050430F /* Encode+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB1D272067900050430F /* Encode+Decode.swift */; };
 		098BAB20272067FA0050430F /* KeychainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB1F272067FA0050430F /* KeychainUser.swift */; };
+		098BAB232720AF580050430F /* NSNotification + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB222720AF570050430F /* NSNotification + Extension.swift */; };
+		098BAB412726C4BA0050430F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BAB402726C4BA0050430F /* ContentViewModel.swift */; };
+		09A1AC9D272C083500B07007 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 09A1AC9C272C083500B07007 /* Kingfisher */; };
+		09A1AC9F272C092200B07007 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A1AC9E272C092200B07007 /* NetworkManager.swift */; };
+		09A1ACA2272C09DB00B07007 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 09A1ACA1272C09DB00B07007 /* Alamofire */; };
+		09A1ACA4272C0A2A00B07007 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A1ACA3272C0A2A00B07007 /* Photos.swift */; };
 		09BC29A026EF869000657474 /* VKClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC299F26EF869000657474 /* VKClientApp.swift */; };
-		09BC29A226EF869000657474 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29A126EF869000657474 /* LoginView.swift */; };
 		09BC29A426EF869200657474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BC29A326EF869200657474 /* Assets.xcassets */; };
 		09BC29A726EF869200657474 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BC29A626EF869200657474 /* Preview Assets.xcassets */; };
 		09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC29AF26F1152500657474 /* RoundedRectangleButtonStyle.swift */; };
@@ -30,22 +42,34 @@
 		09C5382327037A69000429AB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5382227037A69000429AB /* Group.swift */; };
 		09C5382727038A8F000429AB /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09C5382627038A8F000429AB /* Localizable.stringsdict */; };
 		09D922E12717111700710953 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D922E02717111700710953 /* UIApplication + Extension.swift */; };
+		09DE6CEA272C12C0008E2DDD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE6CE9272C12C0008E2DDD /* Realm */; };
+		09DE6CEC272C12C0008E2DDD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE6CEB272C12C0008E2DDD /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0900736D2701ED2200B3C9FF /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		090073702701FD6100B3C9FF /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		090073742702069900B3C9FF /* StandartRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartRowItemView.swift; sourceTree = "<group>"; };
+		092EEDFD272C1894004D2474 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		092EEDFF272C18BE004D2474 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
+		092EEE01272C1939004D2474 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		092EEE03272C196F004D2474 /* GroupInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfo.swift; sourceTree = "<group>"; };
 		09356B9F270212370010CE97 /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
+		093B29662728364E003767BE /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		0960F222272C2EC4000ACDC2 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		0960F224272C2ED8000ACDC2 /* DetachableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
+		0960F226272C2EEE000ACDC2 /* Realm.Configuration+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm.Configuration+Ext.swift"; sourceTree = "<group>"; };
 		098BAAAD271C7CDD0050430F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		098BAAAF271C869E0050430F /* NewsfeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedView.swift; sourceTree = "<group>"; };
 		098BAB16272062AC0050430F /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
-		098BAB18272063980050430F /* VKLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginView.swift; sourceTree = "<group>"; };
 		098BAB1D272067900050430F /* Encode+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encode+Decode.swift"; sourceTree = "<group>"; };
 		098BAB1F272067FA0050430F /* KeychainUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUser.swift; sourceTree = "<group>"; };
+		098BAB222720AF570050430F /* NSNotification + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification + Extension.swift"; sourceTree = "<group>"; };
+		098BAB402726C4BA0050430F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		09A1AC9E272C092200B07007 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		09A1ACA3272C0A2A00B07007 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		09BC299C26EF869000657474 /* VKClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BC299F26EF869000657474 /* VKClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKClientApp.swift; sourceTree = "<group>"; };
-		09BC29A126EF869000657474 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		09BC29A326EF869200657474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09BC29A626EF869200657474 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09BC29A826EF869200657474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +88,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				098BAB1C272065E00050430F /* SwiftKeychainWrapper in Frameworks */,
+				09A1AC9D272C083500B07007 /* Kingfisher in Frameworks */,
+				09A1ACA2272C09DB00B07007 /* Alamofire in Frameworks */,
+				09DE6CEA272C12C0008E2DDD /* Realm in Frameworks */,
+				09DE6CEC272C12C0008E2DDD /* RealmSwift in Frameworks */,
+				090C3653272C107A00FC286D /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +105,11 @@
 				090073702701FD6100B3C9FF /* Friend.swift */,
 				09C5382227037A69000429AB /* Group.swift */,
 				098BAB1F272067FA0050430F /* KeychainUser.swift */,
+				09A1ACA3272C0A2A00B07007 /* Photos.swift */,
+				092EEDFD272C1894004D2474 /* Friends.swift */,
+				092EEDFF272C18BE004D2474 /* Albums.swift */,
+				092EEE01272C1939004D2474 /* Groups.swift */,
+				092EEE03272C196F004D2474 /* GroupInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,7 +117,9 @@
 		09007372270200B100B3C9FF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				098BAB16272062AC0050430F /* VKLoginWebView.swift */,
+				09A1AC9E272C092200B07007 /* NetworkManager.swift */,
+				0960F222272C2EC4000ACDC2 /* RealmService.swift */,
+				0960F224272C2ED8000ACDC2 /* DetachableObject.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -92,10 +127,20 @@
 		09356BA1270213950010CE97 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				093B29662728364E003767BE /* FriendsViewModel.swift */,
 				09C0DC5826FA469400DEFF54 /* FriendsView.swift */,
 				09356B9F270212370010CE97 /* FriendDetailView.swift */,
 			);
 			path = Friend;
+			sourceTree = "<group>";
+		};
+		093B296527282F91003767BE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				098BAB402726C4BA0050430F /* ContentViewModel.swift */,
+				098BAAAD271C7CDD0050430F /* ContentView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		098BAB21272070450050430F /* Helpers */ = {
@@ -104,6 +149,22 @@
 				098BAB1D272067900050430F /* Encode+Decode.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		098BAB42272719000050430F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				098BAB16272062AC0050430F /* VKLoginWebView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		098BAB432727194E0050430F /* Newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				098BAAAF271C869E0050430F /* NewsfeedView.swift */,
+			);
+			path = Newsfeed;
 			sourceTree = "<group>";
 		};
 		09BC299326EF869000657474 = {
@@ -162,6 +223,8 @@
 			children = (
 				09BC29B326F115D100657474 /* Color + Extension.swift */,
 				09D922E02717111700710953 /* UIApplication + Extension.swift */,
+				098BAB222720AF570050430F /* NSNotification + Extension.swift */,
+				0960F226272C2EEE000ACDC2 /* Realm.Configuration+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,12 +232,11 @@
 		09C0DC5626FA44F200DEFF54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				098BAB18272063980050430F /* VKLoginView.swift */,
-				098BAAAD271C7CDD0050430F /* ContentView.swift */,
-				098BAAAF271C869E0050430F /* NewsfeedView.swift */,
+				098BAB42272719000050430F /* Login */,
+				093B296527282F91003767BE /* Main */,
 				09356BA1270213950010CE97 /* Friend */,
+				098BAB432727194E0050430F /* Newsfeed */,
 				09C5381F27037876000429AB /* Group */,
-				09BC29A126EF869000657474 /* LoginView.swift */,
 				090073742702069900B3C9FF /* StandartRowItemView.swift */,
 			);
 			path = Views;
@@ -214,7 +276,11 @@
 			);
 			name = VKClient;
 			packageProductDependencies = (
-				098BAB1B272065E00050430F /* SwiftKeychainWrapper */,
+				09A1AC9C272C083500B07007 /* Kingfisher */,
+				09A1ACA1272C09DB00B07007 /* Alamofire */,
+				090C3652272C107A00FC286D /* SwiftKeychainWrapper */,
+				09DE6CE9272C12C0008E2DDD /* Realm */,
+				09DE6CEB272C12C0008E2DDD /* RealmSwift */,
 			);
 			productName = VKClient;
 			productReference = 09BC299C26EF869000657474 /* VKClient.app */;
@@ -245,7 +311,10 @@
 			);
 			mainGroup = 09BC299326EF869000657474;
 			packageReferences = (
-				098BAB1A272065E00050430F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				09A1AC9B272C083500B07007 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				09A1ACA0272C09DA00B07007 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				090C3651272C107A00FC286D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				09DE6CE8272C12C0008E2DDD /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 09BC299D26EF869000657474 /* Products */;
 			projectDirPath = "";
@@ -276,22 +345,32 @@
 			files = (
 				09C0DC5926FA469400DEFF54 /* FriendsView.swift in Sources */,
 				09C0DC5C26FA4B5800DEFF54 /* CircleShadow.swift in Sources */,
+				092EEDFE272C1894004D2474 /* Friends.swift in Sources */,
+				092EEE00272C18BE004D2474 /* Albums.swift in Sources */,
 				098BAB17272062AC0050430F /* VKLoginWebView.swift in Sources */,
+				092EEE04272C196F004D2474 /* GroupInfo.swift in Sources */,
+				09A1AC9F272C092200B07007 /* NetworkManager.swift in Sources */,
 				098BAAAE271C7CDD0050430F /* ContentView.swift in Sources */,
 				098BAB20272067FA0050430F /* KeychainUser.swift in Sources */,
 				098BAB1E272067900050430F /* Encode+Decode.swift in Sources */,
 				09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */,
 				09C5382327037A69000429AB /* Group.swift in Sources */,
 				09BC29B426F115D100657474 /* Color + Extension.swift in Sources */,
+				0960F223272C2EC4000ACDC2 /* RealmService.swift in Sources */,
 				09D922E12717111700710953 /* UIApplication + Extension.swift in Sources */,
-				09BC29A226EF869000657474 /* LoginView.swift in Sources */,
+				092EEE02272C1939004D2474 /* Groups.swift in Sources */,
+				098BAB232720AF580050430F /* NSNotification + Extension.swift in Sources */,
 				09356BA0270212370010CE97 /* FriendDetailView.swift in Sources */,
 				090073752702069900B3C9FF /* StandartRowItemView.swift in Sources */,
 				0900736E2701ED2200B3C9FF /* GroupsView.swift in Sources */,
 				09C5382127037895000429AB /* GroupDetailView.swift in Sources */,
+				0960F227272C2EEE000ACDC2 /* Realm.Configuration+Ext.swift in Sources */,
+				09A1ACA4272C0A2A00B07007 /* Photos.swift in Sources */,
 				09BC29A026EF869000657474 /* VKClientApp.swift in Sources */,
+				093B29672728364E003767BE /* FriendsViewModel.swift in Sources */,
+				098BAB412726C4BA0050430F /* ContentViewModel.swift in Sources */,
+				0960F225272C2ED8000ACDC2 /* DetachableObject.swift in Sources */,
 				090073712701FD6100B3C9FF /* Friend.swift in Sources */,
-				098BAB19272063980050430F /* VKLoginView.swift in Sources */,
 				098BAAB0271C869E0050430F /* NewsfeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -483,7 +563,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		098BAB1A272065E00050430F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+		090C3651272C107A00FC286D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper.git";
 			requirement = {
@@ -491,13 +571,57 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		09A1AC9B272C083500B07007 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		09A1ACA0272C09DA00B07007 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		09DE6CE8272C12C0008E2DDD /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		098BAB1B272065E00050430F /* SwiftKeychainWrapper */ = {
+		090C3652272C107A00FC286D /* SwiftKeychainWrapper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 098BAB1A272065E00050430F /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			package = 090C3651272C107A00FC286D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
+		};
+		09A1AC9C272C083500B07007 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09A1AC9B272C083500B07007 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		09A1ACA1272C09DB00B07007 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09A1ACA0272C09DA00B07007 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		09DE6CE9272C12C0008E2DDD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09DE6CE8272C12C0008E2DDD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		09DE6CEB272C12C0008E2DDD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09DE6CE8272C12C0008E2DDD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

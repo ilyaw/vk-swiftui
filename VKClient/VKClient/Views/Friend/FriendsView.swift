@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct FriendsView: View {
-    
-    private var friends = getFriends()
+        
+    @ObservedObject var viewModel = FriendsViewModel(realmService: RealmService(),
+                                                     networkManager: NetworkSerivce())
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(friends) { friend in
-                    NavigationLink(destination: FriendDetailView(friendModel: friend)) {
-                        StandartRowItemView(photo: Image(friend.mainPhoto),
-                                            text: friend.fullName)
-                            .padding(5)
-                    }
+            List(viewModel.detachedFriends) { friend in
+                NavigationLink(destination: FriendDetailView(friendModel: friend)) {
+                    StandartRowItemView(photoUrl: friend.photo, text: friend.fullName)
+                        .padding(5)
                 }
             }
+            .onAppear {
+                viewModel.fetchFriends()
+            }
             .navigationTitle("Друзья")
-        }.navigationViewStyle(.stack)
+        }
+        .navigationViewStyle(.stack)
     }
 }
 

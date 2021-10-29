@@ -12,8 +12,7 @@ struct VKClientApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            VKLoginView()
+            ContentView()
         }
     }
 }
