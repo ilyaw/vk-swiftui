@@ -10,7 +10,7 @@ import RealmSwift
 
 class FriendsViewModel: ObservableObject {
   
-    var detachedFriends: [FriendItem] { realmFriends?.map { $0.detached() } ?? [] }
+    var detachedFriends: [Friend] { realmFriends?.map { $0.detached() } ?? [] }
    
     let realmService: AnyRealmService
     let networkManager: AnyNetworkSerivce
@@ -19,7 +19,7 @@ class FriendsViewModel: ObservableObject {
     let objectWillChange = ObjectWillChangePublisher()
     var error: Error?
     
-    private lazy var realmFriends: Results<FriendItem>? = try? realmService.get(FriendItem.self, configuration: .deleteIfMigration).sorted(byKeyPath: "firstName")
+    private lazy var realmFriends: Results<Friend>? = try? realmService.get(Friend.self, configuration: .deleteIfMigration).sorted(byKeyPath: "firstName")
     
     init(realmService: AnyRealmService, networkManager: AnyNetworkSerivce) {
         self.realmService = realmService
@@ -35,7 +35,6 @@ class FriendsViewModel: ObservableObject {
     }
     
     func fetchFriends() {
-        
         let userId = UserDefaults.standard.integer(forKey: "userId")
         
         networkManager.getFriends(userId: userId) { [weak self] result in

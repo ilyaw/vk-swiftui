@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Albums: Codable {
+struct RootAlbums: Codable {
     let response: AlbumsResponse
 }
 
 struct AlbumsResponse: Codable {
     let count: Int
-    let items: [AlbumItem]
+    let items: [Album]
 }
 
-struct AlbumItem: Codable {
+struct Album: Codable {
     let id, thumbID, ownerID, size: Int?
     let title, itemDescription: String?
 

@@ -16,16 +16,7 @@ protocol AnyRealmService {
 }
 
 class RealmService: AnyRealmService {
-    
-//    init() {
-//        let configurator = Realm.Configuration(schemaVersion: 1,  deleteRealmIfMigrationNeeded: true)
-//
-//        guard let realm = try? Realm(configuration: configurator) else { return }
-////        self.realm = realm
-//
-//        print(realm.configuration.fileURL ?? "")
-//    }
-    
+        
     func save<T: Object>(
         items: [T],
         configuration: Realm.Configuration = .deleteIfMigration,

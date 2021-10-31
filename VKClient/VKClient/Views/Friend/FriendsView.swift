@@ -14,8 +14,11 @@ struct FriendsView: View {
     
     var body: some View {
         NavigationView {
+            if let error = viewModel.error {
+                Text(error.localizedDescription)
+            } else {
             List(viewModel.detachedFriends) { friend in
-                NavigationLink(destination: FriendDetailView(friendModel: friend)) {
+                NavigationLink(destination: FriendPhotosView(friend: friend)) {
                     StandartRowItemView(photoUrl: friend.photo, text: friend.fullName)
                         .padding(5)
                 }
@@ -24,6 +27,7 @@ struct FriendsView: View {
                 viewModel.fetchFriends()
             }
             .navigationTitle("Друзья")
+            }
         }
         .navigationViewStyle(.stack)
     }

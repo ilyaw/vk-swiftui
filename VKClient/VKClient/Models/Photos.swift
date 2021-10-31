@@ -8,16 +8,16 @@
 import Foundation
 import RealmSwift
 
-struct Photos: Codable {
+struct RootPhotos: Codable {
     let response: PhotosResponse
 }
 
 struct PhotosResponse: Codable {
     let count: Int
-    let items: [PhotoItem]
+    let items: [Photo]
 }
 
-class PhotoItem: Object, Codable {
+class Photo: Object, Codable, Identifiable {
     @objc dynamic var albumID: Int = 0
     @objc dynamic var date: Int = 0
     @objc dynamic var id: Int = 0
@@ -27,6 +27,10 @@ class PhotoItem: Object, Codable {
     var likes: Likes?
     var reposts: Reposts?
     var comments: Comments?
+    
+    var averageSize: String? {
+        return sizes.first { $0.type == .x }?.url ?? sizes.last?.url
+    }
 
     enum CodingKeys: String, CodingKey {
         case albumID = "album_id"
@@ -37,7 +41,7 @@ class PhotoItem: Object, Codable {
     }
 
     override func isEqual(_ object: Any?) -> Bool {
-        if let object = object as? PhotoItem {
+        if let object = object as? Photo {
             return self.albumID == object.albumID && self.text == object.text
         } else {
             return false

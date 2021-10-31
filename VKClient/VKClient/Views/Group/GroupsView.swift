@@ -9,20 +9,23 @@ import SwiftUI
 
 struct GroupsView: View {
     
-    private var groups = getGroups()
+    @ObservedObject var viewModel = GroupsViewModel(realmService: RealmService(),
+                                                     networkManager: NetworkSerivce())
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(groups) { group in
-//                    NavigationLink(destination: GroupDetailView(group: group)) {
-//                        StandartRowItemView(photo: Image(group.postOwnerImage),
-//                                            text: group.groupName,
-//                                            subtext: group.shortInfo)
-//                            .padding(5)
-//                    }
+            List(viewModel.detachedGroups) { group in
+                NavigationLink(destination: GroupDetailView(group: group)) {
+                    StandartRowItemView(photoUrl: group.photo,
+                                        text: group.name,
+                                        subtext: group.activity)
+                        .padding(5)
                 }
-            }.navigationTitle("Группы")
+            }
+            .onAppear {
+                viewModel.fetchGroups()
+            }
+            .navigationTitle("Группы")
         }.navigationViewStyle(.stack)
     }
 }
