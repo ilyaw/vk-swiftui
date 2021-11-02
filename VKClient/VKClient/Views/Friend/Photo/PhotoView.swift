@@ -13,14 +13,13 @@ struct PhotoView: View {
     
     var body: some View {
         if let url = photo.averageSize {
-            GeometryReader { proxy in
+            GeometryReader { _ in
                 KFImage(URL(string: url))
                     .cancelOnDisappear(true)
                     .resizable()
-//                    .frame(width: proxy.size.width, height: proxy.size.width)
                     .aspectRatio(contentMode: .fill)
-              
             }
+            .clipped()
         }
     }
 }
