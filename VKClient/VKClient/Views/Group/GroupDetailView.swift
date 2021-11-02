@@ -12,12 +12,12 @@ struct GroupDetailView: View {
     let group: Group
     
     var body: some View {
-        Text(group.groupName)
+        Text(group.name)
     }
 }
 
-struct GroupDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupDetailView(group: getGroups().first!)
-    }
-}
+//struct GroupDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GroupDetailView(group: getGroups().first!)
+//    }
+//}
