@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "CodingStyle",
+        "repositoryURL": "https://github.com/ilyaw/CodingStyle.git",
+        "state": {
+          "branch": null,
+          "revision": "d9fe0e19bfa900ceac9028ca057de5ed78902237",
+          "version": "1.1.0"
+        }
+      },
+      {
         "package": "DifferenceKit",
         "repositoryURL": "https://github.com/ra1028/DifferenceKit",
         "state": {

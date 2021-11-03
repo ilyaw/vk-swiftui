@@ -16,6 +16,7 @@
 		092EEE04272C196F004D2474 /* GroupInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092EEE03272C196F004D2474 /* GroupInfo.swift */; };
 		09356BA0270212370010CE97 /* FriendPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09356B9F270212370010CE97 /* FriendPhotosView.swift */; };
 		093B29672728364E003767BE /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B29662728364E003767BE /* FriendsViewModel.swift */; };
+		093E2A3B2732E84C001E12D3 /* CodingStyle in Frameworks */ = {isa = PBXBuildFile; productRef = 093E2A3A2732E84C001E12D3 /* CodingStyle */; };
 		0945A8A0272D56310088E786 /* VKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945A89F272D56310088E786 /* VKError.swift */; };
 		0945A8A2272D595A0088E786 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945A8A1272D595A0088E786 /* GroupsViewModel.swift */; };
 		0945A8AC272D6E220088E786 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 0945A8AB272D6E220088E786 /* ASCollectionView */; };
@@ -99,6 +100,7 @@
 				09DE6CEA272C12C0008E2DDD /* Realm in Frameworks */,
 				09DE6CEC272C12C0008E2DDD /* RealmSwift in Frameworks */,
 				090C3653272C107A00FC286D /* SwiftKeychainWrapper in Frameworks */,
+				093E2A3B2732E84C001E12D3 /* CodingStyle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +136,6 @@
 			children = (
 				0945A8A4272D696A0088E786 /* ViewModel */,
 				0945A8AF272D72770088E786 /* Photo */,
-				09C0DC5826FA469400DEFF54 /* FriendsView.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -160,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				093B29662728364E003767BE /* FriendsViewModel.swift */,
-				0945A8AD272D6FAB0088E786 /* FriendPhotoViewModel.swift */,
+				09C0DC5826FA469400DEFF54 /* FriendsView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,6 +169,7 @@
 		0945A8AF272D72770088E786 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				0945A8AD272D6FAB0088E786 /* FriendPhotoViewModel.swift */,
 				09356B9F270212370010CE97 /* FriendPhotosView.swift */,
 				0945A8B0272D72840088E786 /* PhotoView.swift */,
 			);
@@ -314,6 +316,7 @@
 				09DE6CE9272C12C0008E2DDD /* Realm */,
 				09DE6CEB272C12C0008E2DDD /* RealmSwift */,
 				0945A8AB272D6E220088E786 /* ASCollectionView */,
+				093E2A3A2732E84C001E12D3 /* CodingStyle */,
 			);
 			productName = VKClient;
 			productReference = 09BC299C26EF869000657474 /* VKClient.app */;
@@ -349,6 +352,7 @@
 				090C3651272C107A00FC286D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				09DE6CE8272C12C0008E2DDD /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				0945A8AA272D6E220088E786 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+				093E2A392732E84C001E12D3 /* XCRemoteSwiftPackageReference "CodingStyle" */,
 			);
 			productRefGroup = 09BC299D26EF869000657474 /* Products */;
 			projectDirPath = "";
@@ -607,6 +611,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		093E2A392732E84C001E12D3 /* XCRemoteSwiftPackageReference "CodingStyle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ilyaw/CodingStyle.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		0945A8AA272D6E220088E786 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apptekstudios/ASCollectionView.git";
@@ -646,6 +658,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 090C3651272C107A00FC286D /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
+		};
+		093E2A3A2732E84C001E12D3 /* CodingStyle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 093E2A392732E84C001E12D3 /* XCRemoteSwiftPackageReference "CodingStyle" */;
+			productName = CodingStyle;
 		};
 		0945A8AB272D6E220088E786 /* ASCollectionView */ = {
 			isa = XCSwiftPackageProductDependency;
