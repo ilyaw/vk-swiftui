@@ -10,6 +10,7 @@ import Kingfisher
 
 struct PhotoView: View {
     let photo: Photo
+    var contentMode = ContentMode.fill
     
     var body: some View {
         if let url = photo.averageSize {
@@ -17,7 +18,7 @@ struct PhotoView: View {
                 KFImage(URL(string: url))
                     .cancelOnDisappear(true)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: contentMode)
             }
             .clipped()
         }

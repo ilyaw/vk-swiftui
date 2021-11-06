@@ -7,21 +7,28 @@
 
 import SwiftUI
 import ASCollectionView
+import Kingfisher
 
 struct FriendPhotosView: View {
-
+    
     @ObservedObject var viewModel = FriendPhotoViewModel(networkManager: NetworkSerivce())
     let friend: Friend
+    
+    @State var selectedPost: Bool = false
     
     var body: some View {
         VStack {
             ASCollectionView(data: viewModel.photos) { (photo, context) in
-                PhotoView(photo: photo)
-            }.layout {
-//                .grid(
-//                    layoutMode: .fixedNumberOfColumns(2),
-//                    itemSpacing: 5,
-//                    lineSpacing: 5)
+                NavigationLink(destination: DetailPhotoView(photos: viewModel.photos, index: context.index))
+                {                
+                    PhotoView(photo: photo)
+                }.buttonStyle(NeutralButtonStyle())
+            }
+            .layout {
+                //                .grid(
+                //                    layoutMode: .fixedNumberOfColumns(2),
+                //                    itemSpacing: 5,
+                //                    lineSpacing: 5)
                 
                 let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
                 let width = UIScreen.main.bounds.width / 2
@@ -36,11 +43,7 @@ struct FriendPhotosView: View {
                 viewModel.fetchPhotos(for: friend)
             }
         }
+        .navigationTitle("Фотографии")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
-
-//struct FriendDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FriendPhotosView(friendModel: getFriends().first!)
-//    }
-//}
