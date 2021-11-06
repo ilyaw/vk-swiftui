@@ -48,6 +48,7 @@
 		09C5382127037895000429AB /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5382027037895000429AB /* GroupDetailView.swift */; };
 		09C5382727038A8F000429AB /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09C5382627038A8F000429AB /* Localizable.stringsdict */; };
 		09C8250E2736D96B0018EF8F /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8250D2736D96B0018EF8F /* ReversingScale.swift */; };
+		09C8251027371A750018EF8F /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8250F27371A750018EF8F /* CustomLoader.swift */; };
 		09D922E12717111700710953 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D922E02717111700710953 /* UIApplication + Extension.swift */; };
 		09DE6CEA272C12C0008E2DDD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE6CE9272C12C0008E2DDD /* Realm */; };
 		09DE6CEC272C12C0008E2DDD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE6CEB272C12C0008E2DDD /* RealmSwift */; };
@@ -92,6 +93,7 @@
 		09C5382027037895000429AB /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		09C5382627038A8F000429AB /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		09C8250D2736D96B0018EF8F /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
+		09C8250F27371A750018EF8F /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		09D922E02717111700710953 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,6 +297,7 @@
 				09C5381F27037876000429AB /* Group */,
 				098BAB432727194E0050430F /* Newsfeed */,
 				090073742702069900B3C9FF /* StandartRowItemView.swift */,
+				09C8250F27371A750018EF8F /* CustomLoader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				09C5382127037895000429AB /* GroupDetailView.swift in Sources */,
 				0960F227272C2EEE000ACDC2 /* Realm.Configuration+Ext.swift in Sources */,
 				09A1ACA4272C0A2A00B07007 /* Photos.swift in Sources */,
+				09C8251027371A750018EF8F /* CustomLoader.swift in Sources */,
 				0945A8A2272D595A0088E786 /* GroupsViewModel.swift in Sources */,
 				09BC29A026EF869000657474 /* VKClientApp.swift in Sources */,
 				093B29672728364E003767BE /* FriendsViewModel.swift in Sources */,
