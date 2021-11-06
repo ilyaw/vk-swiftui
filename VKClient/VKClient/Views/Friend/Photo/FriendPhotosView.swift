@@ -22,6 +22,7 @@ struct FriendPhotosView: View {
                 NavigationLink(destination: DetailPhotoView(photos: viewModel.photos, index: context.index))
                 {                
                     PhotoView(photo: photo)
+                        
                 }.buttonStyle(NeutralButtonStyle())
             }
             .layout {

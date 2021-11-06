@@ -47,6 +47,7 @@
 		09C0DC5C26FA4B5800DEFF54 /* CircleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0DC5B26FA4B5800DEFF54 /* CircleShadow.swift */; };
 		09C5382127037895000429AB /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5382027037895000429AB /* GroupDetailView.swift */; };
 		09C5382727038A8F000429AB /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09C5382627038A8F000429AB /* Localizable.stringsdict */; };
+		09C8250E2736D96B0018EF8F /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C8250D2736D96B0018EF8F /* ReversingScale.swift */; };
 		09D922E12717111700710953 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D922E02717111700710953 /* UIApplication + Extension.swift */; };
 		09DE6CEA272C12C0008E2DDD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE6CE9272C12C0008E2DDD /* Realm */; };
 		09DE6CEC272C12C0008E2DDD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE6CEB272C12C0008E2DDD /* RealmSwift */; };
@@ -90,6 +91,7 @@
 		09C0DC5B26FA4B5800DEFF54 /* CircleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadow.swift; sourceTree = "<group>"; };
 		09C5382027037895000429AB /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		09C5382627038A8F000429AB /* Localizable.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		09C8250D2736D96B0018EF8F /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
 		09D922E02717111700710953 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				09C0DC5B26FA4B5800DEFF54 /* CircleShadow.swift */,
+				09C8250D2736D96B0018EF8F /* ReversingScale.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				098BAB20272067FA0050430F /* KeychainUser.swift in Sources */,
 				098BAB1E272067900050430F /* Encode+Decode.swift in Sources */,
 				09BC29B026F1152500657474 /* RoundedRectangleButtonStyle.swift in Sources */,
+				09C8250E2736D96B0018EF8F /* ReversingScale.swift in Sources */,
 				09BC29B426F115D100657474 /* Color + Extension.swift in Sources */,
 				0960F223272C2EC4000ACDC2 /* RealmService.swift in Sources */,
 				09D922E12717111700710953 /* UIApplication + Extension.swift in Sources */,
