@@ -13,7 +13,6 @@ struct DetailPhotoView: View {
     let photos: [Photo]
     
     @State var isLike: Bool = false
-    
     @State private var currentPage: Int
     @State private var dragCompleted = false
     
