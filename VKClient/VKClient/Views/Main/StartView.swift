@@ -11,11 +11,14 @@ struct StartView: View {
     
     @State var animated = false
     @State var endSpash = false
+    @State var shouldShowContentView = false
     
     var body: some View {
         
         ZStack {
-            ContentView()
+            if shouldShowContentView {
+                ContentView()
+            }
             ZStack {
                 Image("VK_Compact_Logo")
                     .resizable()
@@ -36,13 +39,16 @@ struct StartView: View {
     
     private func animateSpash() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            
             withAnimation(.linear(duration: 1.0)) {
                 animated.toggle()
             }
             
             withAnimation(.linear(duration: 0.5)) {
                 endSpash.toggle()
+            }
+            
+            withAnimation(.easeOut(duration: 0.5)) {
+                shouldShowContentView.toggle()
             }
         }
     }

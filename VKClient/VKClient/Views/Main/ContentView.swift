@@ -10,17 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var contentViewModel = ContentViewModel()
-    
-    @State var anim = true
-    
-    private func animateSpash() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            withAnimation(.easeOut(duration: 1)) {
-                anim.toggle()
-            }
-        }
-    }
-    
+
     var body: some View {
         if contentViewModel.isUserAuthorized {
                 TabView {
