@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  LoginViewModel.swift
 //  VKClient
 //
 //  Created by Ilya on 25.10.2021.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftKeychainWrapper
 
-class ContentViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     
     @Published var isUserAuthorized: Bool = false
     private let timeToSecnod: Double = 86400.0

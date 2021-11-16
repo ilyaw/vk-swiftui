@@ -10,13 +10,13 @@ import SwiftUI
 struct NewsfeedView: View {
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 CustomLoader()
             }
-            .navigationTitle("Новостная лента")
-        }
-        .navigationViewStyle(.stack)
+//            .navigationTitle("Новостная лента")
+//        }
+//        .navigationViewStyle(.stack)
     }
 }
 

@@ -17,7 +17,7 @@ struct StartView: View {
         
         ZStack {
             if shouldShowContentView {
-                ContentView()
+//                ContentView()
             }
             ZStack {
                 Image("VK_Compact_Logo")

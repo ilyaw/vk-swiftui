@@ -13,7 +13,7 @@ struct GroupsView: View {
                                                      networkManager: NetworkSerivce())
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             List(viewModel.detachedGroups) { group in
                 NavigationLink(destination: GroupDetailView(group: group)) {
                     StandartRowItemView(photoUrl: group.photo,
@@ -25,8 +25,8 @@ struct GroupsView: View {
             .onAppear {
                 viewModel.fetchGroups()
             }
-            .navigationTitle("Группы")
-        }.navigationViewStyle(.stack)
+//            .navigationTitle("Группы")
+//        }.navigationViewStyle(.stack)
     }
 }
 

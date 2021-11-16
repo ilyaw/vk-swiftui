@@ -13,7 +13,7 @@ struct FriendsView: View {
                                                      networkManager: NetworkSerivce())
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             if let error = viewModel.error {
                 Text(error.localizedDescription)
             } else {
@@ -26,10 +26,10 @@ struct FriendsView: View {
             .onAppear {
                 viewModel.fetchFriends()
             }
-            .navigationTitle("Друзья")
+//            .navigationTitle("Друзья")
             }
-        }
-        .navigationViewStyle(.stack)
+//        }
+//        .navigationViewStyle(.stack)
     }
 }
 
