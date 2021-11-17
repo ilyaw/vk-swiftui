@@ -49,7 +49,10 @@ class AppCoordinator: Coordinator {
                 
                 if isUserLoggedIn {
                     let mainView = self.createMainView()
-                    self.navigationController.pushViewController(mainView, animated: true)
+               
+//                    self.navigationController.navigationBar.clipsToBounds = true
+                    
+                      self.navigationController.pushViewController(mainView, animated: true)
 //                    self.navigationController.navigationBar.topItem?.title = "Друзья"
                     self.navigationController.navigationBar.prefersLargeTitles = true
                 } else {
@@ -65,22 +68,23 @@ class AppCoordinator: Coordinator {
                 guard let self = self else { return }
                 
                 if tag == 0 {
+              
                     self.navigationController.navigationBar.topItem?.title = "Друзья"
                 } else if tag == 1 {
                     self.navigationController.navigationBar.topItem?.title = "Группы"
+//                    self.navigationController.navigationBar.prefersLargeTitles = true
                 } else if tag == 2 {
                     self.navigationController.navigationBar.topItem?.title = "Новости"
                 }
             }
             .store(in: &cancellables)
-        
     }
     
     private func createMainView() -> UIViewController {
         let view = ContentView(navigationViewModel: navigationViewModel)
         return UIHostingController(rootView: view)
     }
-    
+
 }
 
 class NavigationViewModel: ObservableObject {

@@ -97,6 +97,7 @@ class GroupList: Decodable {
                               photo: photo,
                               activity: activity ?? "")
             
+         
             self.models.append(group)
         }
     }
