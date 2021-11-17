@@ -11,9 +11,12 @@ struct NewsfeedView: View {
     
     var body: some View {
         NavigationView {
-            Text("В разработке...")
-                .navigationTitle("Новостная лента")
+            VStack {
+                CustomLoader()
+            }
+            .navigationTitle("Новостная лента")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

@@ -14,28 +14,38 @@ struct StandartRowItemView: View {
     let text: String
     var subtext: String? = nil
     
+    @State private var scalingFactor: CGFloat = 1
+    
     var body: some View {
         HStack {
-            KFImage(URL(string: photoUrl ?? ""))
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .modifier(CircleView())
-                .frame(width: 55, height: 55)
-            VStack(alignment: .leading) {
-                Text(text)
-                if let subtext = subtext {
-                    Text(subtext)
-                        .font(.system(size: 16))
-                        .foregroundColor(Color.subtext)
-                }
-            } .padding(.leading, 5)
+            if let photoUrl = photoUrl {
+                KFImage(URL(string: photoUrl))
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .modifier(CircleView())
+                    .modifier(ReversingScale(to: scalingFactor, onEnded: {
+                        DispatchQueue.main.async {
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                self.scalingFactor = 1
+                            }
+                        }
+                    }))
+                    .frame(width: 55, height: 55)
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            self.scalingFactor = 0.5
+                        }
+                        
+                    }
+                VStack(alignment: .leading) {
+                    Text(text)
+                    if let subtext = subtext {
+                        Text(subtext)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color.subtext)
+                    }
+                } .padding(.leading, 5)
+            }
         }
     }
 }
-
-
-//struct StandartRowItemView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StandartRowItemView(photo: Image("group1"), text: "Group Name", subtext: "1234 участников")
-//    }
-//}

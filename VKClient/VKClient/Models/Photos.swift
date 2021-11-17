@@ -28,10 +28,26 @@ class Photo: Object, Codable, Identifiable {
     var reposts: Reposts?
     var comments: Comments?
     
+    var getLikesCount: Int {
+        return likes?.count ?? 0
+    }
+    
+    var getCommentsCount: Int {
+        return comments?.count ?? 0
+    }
+    
+    var getRepostsCount: Int {
+        return reposts?.count ?? 0
+    }
+    
     var averageSize: String? {
         return sizes.first { $0.type == .x }?.url ?? sizes.last?.url
     }
 
+    var isLike: Bool {
+        return likes?.isLike ?? false
+    }
+    
     enum CodingKeys: String, CodingKey {
         case albumID = "album_id"
         case date, id
