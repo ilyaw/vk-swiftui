@@ -22,12 +22,7 @@ struct FriendPhotosView: View {
             }
             .buttonStyle(NeutralButtonStyle())
         }
-        .layout {
-//                            .grid(
-//                                layoutMode: .fixedNumberOfColumns(2),
-//                                itemSpacing: 1,
-//                                lineSpacing: 1)
-            
+        .layout {            
             let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
             let width = UIScreen.main.bounds.width / 2
             layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

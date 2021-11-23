@@ -69,7 +69,7 @@ struct DetailPhotoView: View {
         } .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onEnded({ value in
             if value.translation.width < 0 {
-                if currentPage < photos.count {
+                if currentPage < photos.count-1 {
                     withAnimation(.spring()) {
                         currentPage += 1
                     }

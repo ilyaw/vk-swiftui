@@ -11,11 +11,13 @@ import SwiftKeychainWrapper
 
 struct VKLoginWebView: UIViewRepresentable {
     
-    fileprivate let navigationDelegate = WebViewNavigationDelegate()
+    @Binding var isAuthorize: Bool
+    
+//    fileprivate let navigationDelegate = WebViewNavigationDelegate()
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        webView.navigationDelegate = navigationDelegate
+        webView.navigationDelegate = context.coordinator
         return webView
     }
     
@@ -48,9 +50,19 @@ struct VKLoginWebView: UIViewRepresentable {
         
         return components.url.map { URLRequest(url: $0) }
     }
+    
+    func makeCoordinator() -> WebViewNavigationDelegate  {
+        return WebViewNavigationDelegate(vkLoginWebView: self)
+    }
 }
 
 class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
+    
+    let vkLoginWebView: VKLoginWebView
+    
+    init(vkLoginWebView: VKLoginWebView) {
+        self.vkLoginWebView = vkLoginWebView
+    }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         guard let url = navigationResponse.response.url,
@@ -89,7 +101,8 @@ class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
         let encodedUser = encode(object: user)
         KeychainWrapper.standard["user"] = encodedUser
         
-        NotificationCenter.default.post(name: NSNotification.VKTokenSaved, object: self)
+//        NotificationCenter.default.post(name: NSNotification.VKTokenSaved, object: self)
+        vkLoginWebView.isAuthorize = true
         
         decisionHandler(.cancel)
     }
